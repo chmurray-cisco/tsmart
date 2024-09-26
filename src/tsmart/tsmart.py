@@ -120,6 +120,7 @@ class TSmart:
                 break
 
         stream.close()
+        sock.close()
 
         return devices.values()
 
@@ -176,6 +177,7 @@ class TSmart:
             break
 
         stream.close()
+        sock.close()
 
         if data is None:
             _LOGGER.warn("Timed-out fetching status from %s" % self.ip)
